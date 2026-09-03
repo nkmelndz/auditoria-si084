@@ -1,0 +1,3 @@
+id_riesgo,activo,dueno_del_riesgo,clasificacion,amenaza,vulnerabilidad,cve,cvss,probabilidad,impacto,riesgo_inherente,nivel
+R-001,App legada interna,Gerencia de Operaciones,Interna,Explotación remota de vulnerabilidad conocida,configuration-listing,N/D,5.0,2,3,6,Medio
+R-002,Portal corporativo,Gerencia Comercial,Pública,Explotación remota de vulnerabilidad conocida,wp-install,N/D,9.8,5,1,5,Bajo

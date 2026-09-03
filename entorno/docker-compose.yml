@@ -22,7 +22,7 @@ services:
     image: vulnerables/web-dvwa:latest
     container_name: si084_dvwa
     ports:
-      - "127.0.0.1:8081:80"
+      - "127.0.0.1:4081:80"
     networks: [audit_net]
     restart: unless-stopped
 
@@ -34,7 +34,7 @@ services:
       POSTGRES_PASSWORD: erp_app
       POSTGRES_DB: erp
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:5433:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
     networks: [audit_net]
@@ -49,7 +49,7 @@ services:
       WORDPRESS_DB_PASSWORD: wp
       WORDPRESS_DB_NAME: wp
     ports:
-      - "127.0.0.1:8082:80"
+      - "127.0.0.1:4082:80"
     volumes:
       - wp_data:/var/www/html
     networks: [audit_net]
@@ -79,5 +79,6 @@ services:
     container_name: si084_simplerisk
     depends_on: [simplerisk-db]
     ports:
-      - "127.0.0.1:8083:80"
+      - "127.0.0.1:4083:80"
+      - "127.0.0.1:443:443"
     networks: [audit_net]
